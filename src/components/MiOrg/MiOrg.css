@@ -1,0 +1,28 @@
+.org__section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-family: 'Prata', serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #6278F7;
+
+    padding-bottom: 24px;
+    border-bottom: 4px solid #6278F7;
+}
+
+.org__section img{
+    position: absolute;
+    right: 30%;
+    
+    cursor: pointer;
+    transition: 0.6s;
+}
+.org__section img:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+}

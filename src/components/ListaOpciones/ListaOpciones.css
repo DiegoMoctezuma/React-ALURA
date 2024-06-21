@@ -1,24 +1,24 @@
-.campo__texto{
+.lista__opciones{
     margin: 12px 0;
     font-family: 'Montserrat', sans-serif;
 }
-.campo__label{
+.lista__opciones label{
     display: block;
     
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 600;
 }
-.campo__texto input{
-    width: 100%;
-    margin-top: 8px;
-    padding: 30px 20px;
-    box-sizing: border-box;
 
-    background-color: #FFFFFF;
-    outline-color: #6278F7;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+.lista__opciones select{
+    width: 100%;
+    padding: 30px 20px;
+    margin-top: 8px;
+
     border: none;
+    outline-color: #6278F7;    
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
 
     font-size: 16px;
 }
