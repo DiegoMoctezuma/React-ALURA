@@ -7,9 +7,9 @@ function ListaOpciones(props) {
         props.set(e.target.value);
     };
 
-    //MAP
-    const listaEquipos = ["Programación", "Front End", "Data Science", "Devops", "UX y Diseño", "Móvil", "Innovación y Gestión"];
-
+    // Lista de equipos
+    const listaEquipos = props.listaEquipos;
+    
     return (
         <div className='lista__opciones'>
             <label>Equipos:</label>

@@ -4,7 +4,7 @@ import CampoTexto from "../CampoTexto/CampoTexto";
 import ListaOpciones from "../ListaOpciones/ListaOpciones";
 import Boton from "../Boton/Boton";
 
-function Form() {
+function Form(props) {
 
     // Nombre
     const [nombre,setNombre] = useState('');
@@ -59,6 +59,7 @@ function Form() {
                 <ListaOpciones
                     valor={equipo}
                     set={setEquipo}
+                    listaEquipos={props.datos}
                 />
                 <Boton texto="Crear"/>
             </form>
