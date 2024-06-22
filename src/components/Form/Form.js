@@ -28,7 +28,7 @@ function Form(props) {
             foto,
             equipo
         };
-        console.log(datosEnviar);
+        props.registrarColaborador(datosEnviar);
     };
 
     return (

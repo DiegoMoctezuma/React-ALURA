@@ -4,11 +4,12 @@ import Header from "./components/Header/Header";
 import Form from './components/Form/Form';
 import MiOrg from './components/MiOrg/MiOrg';
 import Equipo from './components/Equipo/Equipo';
+import Footer from './components/Footer/Footer';
 
 export default function App() {
 
-  // Estado
-  const [mostrarForm,actualizarMostrarForm] = useState(false);
+  // Estado form
+  const [mostrarForm,actualizarMostrarForm] = useState(true);
   const cambiarMostrarForm = () => {
     actualizarMostrarForm(!mostrarForm);
   };
@@ -52,13 +53,41 @@ export default function App() {
     }
   ];
 
+  //Registro de colaborador
+  const [colaboradores, setColaboradores] = useState([]);
+  const registrarColaborador = (colaborador) => {
+    // Spread operator
+    setColaboradores([...colaboradores, colaborador]);
+  };
 
   return (
     <div>
+      {/* Header */}
       <Header/>
-      {mostrarForm && <Form datos={listaEquipos.map(equipo => equipo.titulo)}/>}
+
+      {/* Formulario */}
+      {
+        mostrarForm && 
+        <Form 
+          datos={listaEquipos.map(equipo => equipo.titulo)}
+          registrarColaborador={registrarColaborador}
+        />
+      }
+
+      {/* MiOrg - boton y titulo */}
       <MiOrg cambiarMostrarForm={cambiarMostrarForm}/>
-      {listaEquipos.map((equipo) => <Equipo key={equipo.titulo} datos={equipo}/>)}
+
+      {/* Lista de equipos */}
+      {
+        listaEquipos.map((equipo) => 
+          <Equipo 
+            key={equipo.titulo}   
+            datos={equipo}
+            colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)}
+          />
+        )
+      }
+      <Footer/>
     </div>
   );
 }
