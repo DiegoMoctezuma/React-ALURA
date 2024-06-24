@@ -1,5 +1,4 @@
 import './MiOrg.css';
-import { act, useState } from 'react';
 
 function MiOrg(props) {
 

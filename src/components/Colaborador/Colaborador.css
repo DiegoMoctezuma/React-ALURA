@@ -1,6 +1,7 @@
 .colaborador {
     width: 280px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
+    position: relative;
 }
 
 .colaborador__encabezado {
@@ -39,4 +40,32 @@
     line-height: 22px;
     font-weight: 400;
     margin: 0;
+}
+
+.eliminar {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+
+    transform: scale(2);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.eliminar:hover{
+    fill: red;
+    transform: scale(2.3);
+    transition: 0.4s;
+}
+
+.heart{
+    transform: scale(2);
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.heart:hover{
+    fill: red;
+    transform: scale(2.4);
+    transition: 0.4s;
 }

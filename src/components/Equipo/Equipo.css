@@ -3,7 +3,8 @@
     padding: 32px;
     box-sizing: border-box;
     
-    text-align: center;    
+    text-align: center;  
+    position: relative;  
 }
 .equipo h3{
     font-size: 32px;
@@ -20,4 +21,10 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.input__color{
+    position: absolute;
+    top: 20px;
+    right: 50px;
 }
